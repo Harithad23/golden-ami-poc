@@ -26,16 +26,16 @@ jobs:
 
       - name: Initialize Packer
         id: initpacker
-        run: packer init ./image-builder/
+        run: packer init ubuntu24
 
       - name: Format Packer
         id: fmtpacker
-        run: packer fmt ./image-builder/
+        run: packer fmt ubuntu24
 
       - name: Validate Packer
         id: validate
-        run: packer validate ./image-builder/
+        run: packer validate ubuntu24
 
       - name: Build Image
         id: build
-        run: packer build ./image-builder/
+        run: packer build ubuntu24
